@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyhexnurbs-iga"
+version = "0.1.0"
+description = "Solid NURBS conforming scaffolding & isogeometric analysis (IGA) toolkit for hexahedral N-junction geometries — Work In Progress"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "LicenseRef-CC-BY-NC-4.0" }
+authors = [{ name = "Stefano Moriconi" }]
+keywords = [
+    "nurbs",
+    "isogeometric-analysis",
+    "hexahedral-mesh",
+    "scaffolding",
+    "cad",
+    "geometric-modeling",
+    "scientific-computing",
+    "python",
+]
+dependencies = [
+    "numpy>=1.23",
+    "scipy>=1.9",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+viz = ["matplotlib>=3.5", "pyvista>=0.43"]
+dev = ["pytest>=7.0", "matplotlib>=3.5", "pyvista>=0.43"]
+
+[project.scripts]
+# Launch the HexIGASim Tk GUI (import/run/export on a real .txt geometry).
+hexiga = "hexiga.gui.app_sim:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hexiga*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

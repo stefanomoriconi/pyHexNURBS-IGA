@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+*.egg
+
+# Test / CI
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+*.swp
+*.swo
+
+# Project-specific
+out/
+_gui_finite.py
+run_e2e_junct3.py
+probe_*.py
+smoke_*.py
+inspect_*.py
+verify_*.py
+*_scratch.py
+
+# Keep test assets (small, required for tests)
+!test_assets/*.npz
+
+# Compiled native backend artifacts (optional accelerator; build locally)
+hexiga/nurbs/_c/*.dll
+hexiga/nurbs/_c/*.so
+hexiga/nurbs/_c/*.dylib
+hexiga/nurbs/_c/*.lib
+hexiga/nurbs/_c/*.exp
+hexiga/nurbs/_c/src/build/

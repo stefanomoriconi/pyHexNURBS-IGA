@@ -25,7 +25,7 @@ provisional. See [Known limitations](#known-limitations) below.
 
 | | |
 |---|---|
-| ![Torus](images/torus_solid.png) | ![Gear](images/gear_solid.png) |
+| ![Torus (reflection-line shading, smoothed)](images/torus_reflection.png) | ![Gear](images/gear_solid.png) |
 | ![Gear exploded](images/gear_exploded.png) | ![Stent](images/stent_solid.png) |
 
 ## Walkthroughs
